@@ -1,9 +1,14 @@
+/*
+    [Module]: RV32I Arithmetic Logic Unit (ALU)
+
+    [Description]: This execution unit executes the base arithmetic RV32I instructions, like ADD or XOR.
+*/
 module alu #(
     ID_WIDTH = 6
 )(
-    input wire                  clk,
-    input wire                  clk_en,
-    input wire                  sync_rst,
+    input wire                  clk,                    //Clock
+    input wire                  clk_en,                 //Enable clock
+    input wire                  sync_rst,               //Synchronous reset (independent from CLK_EN)
     
     // * Input buffer1 pins
     input   wire                call,                   //Place an instruction in the buffer1

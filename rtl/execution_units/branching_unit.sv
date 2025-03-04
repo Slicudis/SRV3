@@ -1,3 +1,12 @@
+/*
+    [Module]: Pipelined branching unit
+
+    [Description]: This execution unit is used for detecting branch mispredictions, flushing the pipeline
+    and updating the fetch stage with the correct PC address. The branching unit features a 3-stage pipeline.
+    The first stage is for fetching the instruction. The second stage is for calculating the condition result
+    and the target address. The third stage is for detecting branch mispredictions.
+*/
+
 module branching_unit #(
     parameter ID_SIZE = 8
 )(

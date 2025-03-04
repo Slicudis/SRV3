@@ -26,4 +26,4 @@ CPU.sv:
         reorder_buffer.sv
 ```
 The following diagram shows the structure of SRV3:\
-![SRV3](docs/srv3.png)
+![SRV3](docs/SRV3.png)

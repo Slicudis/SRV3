@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "testBench_Clean",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/script/"
+            },
+            "windows": {
+                "command": "wsl DISPLAY=:0.0 bash ./simulate.sh ${fileBasename}"
+            },
+            "linux": {
+                "command": "./simulate.sh ${fileBasename}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "echo": false,
+                "clear": true,
+                "close": false
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

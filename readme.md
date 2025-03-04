@@ -27,7 +27,7 @@ CPU.sv:
     icache.sv
     dcache.sv
 ```
-The following diagram shows the structure of SRV3:\
+The following diagram shows the structure of SRV3:
 
 ![SRV3](docs/SRV3.png)
 

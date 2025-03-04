@@ -290,4 +290,5 @@ module multiplication_unit #(
     assign inst_id_out = stage7.inst_id;
     assign output_valid = stage7.valid;
 
+///
 endmodule : multiplication_unit

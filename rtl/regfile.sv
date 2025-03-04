@@ -1,3 +1,12 @@
+/*
+    [Module]: RV32I register file & scoreboard
+
+    [Description]: Dual-read register file with 31 registers and a scoreboard with 32 entries.
+
+    [NOTE]: Sync_rst only resets the scoreboard. The registers will have to be reset on
+    boot by the firmware.
+*/
+
 module regfile(
     input   wire        clk,
     input   wire        clk_en,
@@ -45,17 +54,12 @@ module regfile(
 
     always_ff @(posedge clk) begin
         if(sync_rst) begin
-            // ! The regfile will have to be reset by the boot rom code
             scoreboard <= scoreboard_reset_array;
         end else if(clk_en) begin
-
             if(write_en) begin
                 register_file[write_address] <= data_in;
                 scoreboard[write_address] <= 1'b0;
             end
-
-            // ! write_en1 has priority over write_en2, but that doesn't really matter because there won't be any cases of
-            // ! writing conflicts to the same address
             if  (reserve && !(write_en && (write_address == reserve_address))) begin
                 scoreboard[reserve_address] <= 1'b1;
             end

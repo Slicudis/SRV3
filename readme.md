@@ -24,6 +24,30 @@ CPU.sv:
                     division_unit.sv
                     memory_unit.sv
         reorder_buffer.sv
+    icache.sv
+    dcache.sv
 ```
 The following diagram shows the structure of SRV3:\
+
 ![SRV3](docs/SRV3.png)
+
+## State of the project
+
+- [ ] core.sv
+- [x] fetch_stage.sv
+- [ ] decode_stage.sv
+- [x] regfile.sv
+- [ ] inst_decoder.sv
+- [ ] branch_pred_unit.sv
+- [ ] btb.sv
+- [ ] saturating_counters.sv
+- [ ] dispatch_stage.sv
+- [ ] execute_stage.sv
+- [x] alu.sv
+- [x] multiplication_unit.sv
+- [x] branching_unit.sv
+- [ ] division_unit.sv
+- [ ] memory_unit.sv
+- [ ] reorder_buffer.sv
+- [ ] icache.sv
+- [ ] dcache.sv

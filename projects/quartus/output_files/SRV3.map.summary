@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Mar  4 01:00:08 2025
+Analysis & Synthesis Status : Successful - Thu Mar  6 17:36:38 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : SRV3
-Top-level Entity Name : regfile
+Top-level Entity Name : fetch_stage
 Family : Cyclone IV E
-Total logic elements : 2,473
-    Total combinational functions : 1,481
-    Dedicated logic registers : 1,023
-Total registers : 1023
-Total pins : 124
+Total logic elements : 733
+    Total combinational functions : 733
+    Dedicated logic registers : 30
+Total registers : 30
+Total pins : 94
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

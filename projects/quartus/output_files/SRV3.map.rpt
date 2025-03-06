@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SRV3
-Tue Mar  4 01:00:08 2025
+Thu Mar  6 17:36:38 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -15,9 +15,10 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar  4 01:00:08 2025          ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar  6 17:36:38 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; SRV3                                           ;
-; Top-level Entity Name              ; regfile                                        ;
+; Top-level Entity Name              ; fetch_stage                                    ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 2,473                                          ;
-;     Total combinational functions  ; 1,481                                          ;
-;     Dedicated logic registers      ; 1,023                                          ;
-; Total registers                    ; 1023                                           ;
-; Total pins                         ; 124                                            ;
+; Total logic elements               ; 733                                            ;
+;     Total combinational functions  ; 733                                            ;
+;     Dedicated logic registers      ; 30                                             ;
+; Total registers                    ; 30                                             ;
+; Total pins                         ; 94                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -67,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; regfile            ; SRV3               ;
+; Top-level entity name                                            ; fetch_stage        ; SRV3               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -160,65 +161,71 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
-; ../../rtl/regfile.sv             ; yes             ; User SystemVerilog HDL File  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/regfile.sv ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+; ../../rtl/fetch_stage.sv         ; yes             ; User SystemVerilog HDL File  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/fetch_stage.sv                          ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/abs_divider.inc                  ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc              ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/aglobal231.inc                   ;         ;
+; db/lpm_divide_fcm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/lpm_divide_fcm.tdf      ;         ;
+; db/sign_div_unsign_4nh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/sign_div_unsign_4nh.tdf ;         ;
+; db/alt_u_div_s9f.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/alt_u_div_s9f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/add_sub_8pc.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 2,473     ;
-;                                             ;           ;
-; Total combinational functions               ; 1481      ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1440      ;
-;     -- 3 input functions                    ; 30        ;
-;     -- <=2 input functions                  ; 11        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1481      ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 1023      ;
-;     -- Dedicated logic registers            ; 1023      ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 124       ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1023      ;
-; Total fan-out                               ; 9163      ;
-; Average fan-out                             ; 3.33      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 733            ;
+;                                             ;                ;
+; Total combinational functions               ; 733            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 178            ;
+;     -- 3 input functions                    ; 209            ;
+;     -- <=2 input functions                  ; 346            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 529            ;
+;     -- arithmetic mode                      ; 204            ;
+;                                             ;                ;
+; Total registers                             ; 30             ;
+;     -- Dedicated logic registers            ; 30             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 94             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; write_en~input ;
+; Maximum fan-out                             ; 62             ;
+; Total fan-out                               ; 2228           ;
+; Average fan-out                             ; 2.34           ;
++---------------------------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |regfile                   ; 1481 (1481)         ; 1023 (1023)               ; 0           ; 0            ; 0       ; 0         ; 124  ; 0            ; |regfile            ; regfile     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                   ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |fetch_stage                           ; 733 (109)           ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 94   ; 0            ; |fetch_stage                                                                                                 ; fetch_stage         ; work         ;
+;    |lpm_divide:Mod0|                   ; 624 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_stage|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_fcm:auto_generated|  ; 624 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_stage|lpm_divide:Mod0|lpm_divide_fcm:auto_generated                                                   ; lpm_divide_fcm      ; work         ;
+;          |sign_div_unsign_4nh:divider| ; 624 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_stage|lpm_divide:Mod0|lpm_divide_fcm:auto_generated|sign_div_unsign_4nh:divider                       ; sign_div_unsign_4nh ; work         ;
+;             |alt_u_div_s9f:divider|    ; 624 (624)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_stage|lpm_divide:Mod0|lpm_divide_fcm:auto_generated|sign_div_unsign_4nh:divider|alt_u_div_s9f:divider ; alt_u_div_s9f       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -227,12 +234,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1023  ;
-; Number of registers using Synchronous Clear  ; 31    ;
+; Total registers                              ; 30    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1023  ;
+; Number of registers using Clock Enable       ; 30    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -242,9 +249,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 32:1               ; 33 bits   ; 693 LEs       ; 660 LEs              ; 33 LEs                 ; No         ; |regfile|Mux17             ;
-; 32:1               ; 33 bits   ; 693 LEs       ; 660 LEs              ; 33 LEs                 ; No         ; |regfile|Mux45             ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |fetch_stage|pc[0]         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 31             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_fcm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -252,18 +281,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 124                         ;
-; cycloneiii_ff         ; 1023                        ;
-;     ENA               ; 992                         ;
-;     ENA SCLR          ; 31                          ;
-; cycloneiii_lcell_comb ; 1481                        ;
-;     normal            ; 1481                        ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 30                          ;
-;         4 data inputs ; 1440                        ;
+; boundary_port         ; 94                          ;
+; cycloneiii_ff         ; 30                          ;
+;     ENA               ; 30                          ;
+; cycloneiii_lcell_comb ; 733                         ;
+;     arith             ; 204                         ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 169                         ;
+;     normal            ; 529                         ;
+;         0 data inputs ; 23                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 287                         ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 178                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 4.47                        ;
+; Max LUT depth         ; 65.80                       ;
+; Average LUT depth     ; 59.57                       ;
 +-----------------------+-----------------------------+
 
 
@@ -272,7 +305,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -282,29 +315,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Mar  4 00:59:57 2025
+    Info: Processing started: Thu Mar  6 17:36:27 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SRV3 -c SRV3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/alu.sv
-    Info (12023): Found entity 1: alu File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/alu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/fetch_stage.sv
+    Info (12023): Found entity 1: fetch_stage File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/fetch_stage.sv Line: 1
+Warning (12019): Can't analyze file -- file ../../rtl/alu.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/regfile.sv
-    Info (12023): Found entity 1: regfile File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/regfile.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/multiplication_unit.sv
-    Info (12023): Found entity 1: multiplication_unit File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/multiplication_unit.sv Line: 22
-Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at regfile.sv(24): object "regfile_reset_array" assigned a value but never read File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/regfile.sv Line: 24
+    Info (12023): Found entity 1: regfile File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/regfile.sv Line: 10
+Warning (12019): Can't analyze file -- file ../../rtl/multiplication_unit.sv is missing
+Info (12127): Elaborating entity "fetch_stage" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at fetch_stage.sv(11): truncated value with size 32 to match size of target (30) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/fetch_stage.sv Line: 11
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/fetch_stage.sv Line: 11
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/fetch_stage.sv Line: 11
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/fetch_stage.sv Line: 11
+    Info (12134): Parameter "LPM_WIDTHN" = "31"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fcm.tdf
+    Info (12023): Found entity 1: lpm_divide_fcm File: E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/lpm_divide_fcm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_4nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_4nh File: E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/sign_div_unsign_4nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s9f.tdf
+    Info (12023): Found entity 1: alt_u_div_s9f File: E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/alt_u_div_s9f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/add_sub_8pc.tdf Line: 23
 Info (286030): Timing-Driven Synthesis is running
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "lpm_divide:Mod0|lpm_divide_fcm:auto_generated|sign_div_unsign_4nh:divider|alt_u_div_s9f:divider|add_sub_30_result_int[0]~0" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/alt_u_div_s9f.tdf Line: 147
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2597 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 57 input pins
-    Info (21059): Implemented 67 output pins
-    Info (21061): Implemented 2473 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Tue Mar  4 01:00:08 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+Info (21057): Implemented 827 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 60 output pins
+    Info (21061): Implemented 733 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Thu Mar  6 17:36:39 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:23
 
 

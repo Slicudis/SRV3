@@ -4,343 +4,243 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "rs1_data[0]",
+					"name" : "data_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[1]",
+					"name" : "data_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[2]",
+					"name" : "data_out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[3]",
+					"name" : "data_out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[4]",
+					"name" : "data_out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[5]",
+					"name" : "data_out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[6]",
+					"name" : "data_out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[7]",
+					"name" : "data_out[7]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[8]",
+					"name" : "data_out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[9]",
+					"name" : "data_out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[10]",
+					"name" : "data_out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[11]",
+					"name" : "data_out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[12]",
+					"name" : "data_out[12]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[13]",
+					"name" : "data_out[13]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[14]",
+					"name" : "data_out[14]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[15]",
+					"name" : "data_out[15]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[16]",
+					"name" : "data_out[16]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[17]",
+					"name" : "data_out[17]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[18]",
+					"name" : "data_out[18]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[19]",
+					"name" : "data_out[19]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[20]",
+					"name" : "data_out[20]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[21]",
+					"name" : "data_out[21]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[22]",
+					"name" : "data_out[22]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[23]",
+					"name" : "data_out[23]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[24]",
+					"name" : "data_out[24]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[25]",
+					"name" : "data_out[25]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[26]",
+					"name" : "data_out[26]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[27]",
+					"name" : "data_out[27]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[28]",
+					"name" : "data_out[28]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[29]",
+					"name" : "data_out[29]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[30]",
+					"name" : "forwarded_data_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rs1_data[31]",
+					"name" : "forwarded_data_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[0]",
+					"name" : "forwarded_data_out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[1]",
+					"name" : "forwarded_data_out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[2]",
+					"name" : "forwarded_data_out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[3]",
+					"name" : "forwarded_data_out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[4]",
+					"name" : "forwarded_data_out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[5]",
+					"name" : "forwarded_data_out[7]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[6]",
+					"name" : "forwarded_data_out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[7]",
+					"name" : "forwarded_data_out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[8]",
+					"name" : "forwarded_data_out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[9]",
+					"name" : "forwarded_data_out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[10]",
+					"name" : "forwarded_data_out[12]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[11]",
+					"name" : "forwarded_data_out[13]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[12]",
+					"name" : "forwarded_data_out[14]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[13]",
+					"name" : "forwarded_data_out[15]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[14]",
+					"name" : "forwarded_data_out[16]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[15]",
+					"name" : "forwarded_data_out[17]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[16]",
+					"name" : "forwarded_data_out[18]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[17]",
+					"name" : "forwarded_data_out[19]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[18]",
+					"name" : "forwarded_data_out[20]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[19]",
+					"name" : "forwarded_data_out[21]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[20]",
+					"name" : "forwarded_data_out[22]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[21]",
+					"name" : "forwarded_data_out[23]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[22]",
+					"name" : "forwarded_data_out[24]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[23]",
+					"name" : "forwarded_data_out[25]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[24]",
+					"name" : "forwarded_data_out[26]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[25]",
+					"name" : "forwarded_data_out[27]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[26]",
+					"name" : "forwarded_data_out[28]",
 					"strict" : false
 				},
 				{
-					"name" : "rs2_data[27]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_data[28]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_data[29]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_data[30]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_data[31]",
-					"strict" : false
-				},
-				{
-					"name" : "rs1_reserved",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_reserved",
-					"strict" : false
-				},
-				{
-					"name" : "write_reserved",
-					"strict" : false
-				},
-				{
-					"name" : "rs1_address[2]",
-					"strict" : false
-				},
-				{
-					"name" : "rs1_address[3]",
-					"strict" : false
-				},
-				{
-					"name" : "rs1_address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "rs1_address[1]",
-					"strict" : false
-				},
-				{
-					"name" : "rs1_address[4]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_address[2]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_address[3]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_address[1]",
-					"strict" : false
-				},
-				{
-					"name" : "rs2_address[4]",
-					"strict" : false
-				},
-				{
-					"name" : "write_address[3]",
-					"strict" : false
-				},
-				{
-					"name" : "write_address[2]",
-					"strict" : false
-				},
-				{
-					"name" : "write_address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "write_address[1]",
-					"strict" : false
-				},
-				{
-					"name" : "write_address[4]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[0]",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "clk_en",
+					"name" : "forwarded_data_out[29]",
 					"strict" : false
 				},
 				{
@@ -348,7 +248,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "sync_rst",
+					"name" : "data_in[0]",
 					"strict" : false
 				},
 				{
@@ -468,35 +368,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_in[30]",
+					"name" : "sync_rst",
 					"strict" : false
 				},
 				{
-					"name" : "data_in[31]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "reserve_address[4]",
-					"strict" : false
-				},
-				{
-					"name" : "reserve_address[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reserve_address[2]",
-					"strict" : false
-				},
-				{
-					"name" : "reserve_address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reserve",
-					"strict" : false
-				},
-				{
-					"name" : "reserve_address[1]",
+					"name" : "clk_en",
 					"strict" : false
 				}
 			]

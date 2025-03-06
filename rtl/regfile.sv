@@ -25,8 +25,7 @@ module regfile(
     output  wire [31:0] rs2_data,
 
     output  wire        rs1_reserved,
-    output  wire        rs2_reserved,
-    output  wire        write_reserved
+    output  wire        rs2_reserved
 );
     reg [31:0] register_file [31:1];
     wire [31:0] regfile_read [31:0];
@@ -70,6 +69,5 @@ module regfile(
     assign rs2_data = regfile_read[rs2_address];
     assign rs1_reserved = scoreboard_read[rs1_address];
     assign rs2_reserved = scoreboard_read[rs2_address];
-    assign write_reserved = scoreboard_read[write_address];
 
 endmodule : regfile

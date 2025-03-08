@@ -87,7 +87,7 @@ module reorder_buffer #(
             logic [31:0] selected_exe_data;
 
             always_comb begin : Unit_sel_mux
-                case(entry[i].exe_unit_sel)
+                case(entry[i].inst_id)
                     2'h0: begin
                         selected_exe_available = alu_result_valid;
                         selected_inst_id = alu_inst_id;

@@ -1,1 +1,0 @@
-Info (10281): Verilog HDL Declaration information at pipelined_multiplier.sv(29): object "stage1" differs only in case from object "Stage1" in the same scope File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/pipelined_multiplier.sv Line: 29

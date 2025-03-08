@@ -36,7 +36,7 @@ module multiplier_tb(
         //end
     end
 
-    pipelined_multiplier #(
+    multiplication_unit #(
         .ID_SIZE(8)
     ) pipelined_multiplier_instance (
         .clk(clk),

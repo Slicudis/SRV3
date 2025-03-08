@@ -45,9 +45,9 @@ The following diagram shows the structure of SRV3:
 - [ ] execute_stage.sv
 - [x] alu.sv
 - [x] multiplication_unit.sv
-- [x] branching_unit.sv (will be updated)
+- [x] branching_unit.sv
 - [ ] division_unit.sv
 - [ ] memory_unit.sv
-- [ ] reorder_buffer.sv
+- [x] reorder_buffer.sv
 - [ ] icache.sv
 - [ ] dcache.sv

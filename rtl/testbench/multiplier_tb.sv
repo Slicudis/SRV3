@@ -31,7 +31,7 @@ module multiplier_tb(
             //if(actual_mult_result == data_out) $display("Passed: %H * %H = %H", $signed(data_in1), $signed(data_in2), $signed(data_out));
             //else begin
             //    $display("Failed: %H * %H != %H (= %H)", $signed(data_in1), $signed(data_in2), $signed(data_out), $signed(actual_mult_result));
-                //failed <= 1;
+            //    failed <= 1;
             //end
         //end
     end

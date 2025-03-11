@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Mar 10 21:56:03 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : SRV3
+Top-level Entity Name : get_fmax
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 750 / 22,320 ( 3 % )
+    Total combinational functions : 544 / 22,320 ( 2 % )
+    Dedicated logic registers : 514 / 22,320 ( 2 % )
+Total registers : 514
+Total pins : 85 / 154 ( 55 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

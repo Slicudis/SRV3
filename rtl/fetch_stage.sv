@@ -14,7 +14,7 @@ module fetch_stage(
         if(sync_rst) pc <= 30'h3fffffff;
         else if(clk_en) pc <= next_pc;
     end
-
+    
     assign data_out = pc;
     assign forwarded_data_out = next_pc;
 

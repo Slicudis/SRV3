@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Mar 10 21:55:49 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : SRV3
+Top-level Entity Name : get_fmax
+Family : Cyclone IV E
+Total logic elements : 980
+    Total combinational functions : 544
+    Dedicated logic registers : 514
+Total registers : 514
+Total pins : 85
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

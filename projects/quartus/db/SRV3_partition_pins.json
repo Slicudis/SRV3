@@ -1,0 +1,333 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rob_full",
+					"strict" : false
+				},
+				{
+					"name" : "regfile_we",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out_reduced",
+					"strict" : false
+				},
+				{
+					"name" : "sync_rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "clk_en",
+					"strict" : false
+				},
+				{
+					"name" : "allocate",
+					"strict" : false
+				},
+				{
+					"name" : "branch_result_ready",
+					"strict" : false
+				},
+				{
+					"name" : "flush_speculative",
+					"strict" : false
+				},
+				{
+					"name" : "speculative_mode",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "writeback_address_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_result_valid",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_result_valid",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_inst_id[2]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_inst_id[3]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_inst_id[3]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_inst_id[2]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_inst_id[1]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_inst_id[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_inst_id[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_inst_id[1]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_inst_id[4]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_inst_id[4]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_result_valid",
+					"strict" : false
+				},
+				{
+					"name" : "divider_inst_id[2]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_inst_id[3]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_inst_id[1]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_inst_id[0]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_inst_id[4]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_valid",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_inst_id[3]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_inst_id[4]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_inst_id[2]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_inst_id[1]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_inst_id[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_id[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_id[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_id[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_id[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_id[4]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_data_reduced[1]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_reduced[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_data_reduced[1]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_data_reduced[1]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_reduced[2]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_data_reduced[2]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_data_reduced[2]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_data_reduced[2]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_data_reduced[3]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_reduced[3]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_data_reduced[3]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_data_reduced[3]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_reduced[4]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_data_reduced[4]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_data_reduced[4]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_data_reduced[4]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_data_reduced[5]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_reduced[5]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_data_reduced[5]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_data_reduced[5]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_reduced[0]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_data_reduced[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_data_reduced[0]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_data_reduced[0]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_data_reduced[6]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_reduced[6]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_data_reduced[6]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_data_reduced[6]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_unit_data_reduced[7]",
+					"strict" : false
+				},
+				{
+					"name" : "multiplier_data_reduced[7]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_data_reduced[7]",
+					"strict" : false
+				},
+				{
+					"name" : "divider_data_reduced[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

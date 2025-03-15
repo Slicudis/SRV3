@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY get_fmax
+set_global_assignment -name TOP_LEVEL_ENTITY inst_decoder
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:46:58  FEBRUARY 20, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
@@ -50,6 +50,7 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE ../../rtl/inst_decoder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../rtl/reorder_buffer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../rtl/fetch_stage.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../rtl/alu.sv

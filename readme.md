@@ -37,7 +37,7 @@ The following diagram shows the structure of SRV3:
 - [x] fetch_stage.sv
 - [ ] decode_stage.sv
 - [x] regfile.sv
-- [ ] inst_decoder.sv
+- [x] inst_decoder.sv
 - [ ] branch_pred_unit.sv
 - [ ] btb.sv
 - [ ] saturating_counters.sv

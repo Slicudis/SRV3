@@ -4,327 +4,95 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "rob_full",
+					"name" : "ctr_word[0]",
 					"strict" : false
 				},
 				{
-					"name" : "regfile_we",
+					"name" : "ctr_word[1]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address[0]",
+					"name" : "ctr_word[2]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address[1]",
+					"name" : "ctr_word[3]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address[2]",
+					"name" : "ctr_word[4]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address[3]",
+					"name" : "ctr_word[5]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address[4]",
+					"name" : "ctr_word[6]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out_reduced",
+					"name" : "ctr_word[7]",
 					"strict" : false
 				},
 				{
-					"name" : "sync_rst",
+					"name" : "ctr_word[8]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "ctr_word[9]",
 					"strict" : false
 				},
 				{
-					"name" : "clk_en",
+					"name" : "ctr_word[10]",
 					"strict" : false
 				},
 				{
-					"name" : "allocate",
+					"name" : "ctr_word[11]",
 					"strict" : false
 				},
 				{
-					"name" : "branch_result_ready",
+					"name" : "ctr_word[12]",
 					"strict" : false
 				},
 				{
-					"name" : "flush_speculative",
+					"name" : "ctr_word[14]",
 					"strict" : false
 				},
 				{
-					"name" : "speculative_mode",
+					"name" : "ctr_word[15]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address_in[0]",
+					"name" : "major_opcode_in[5]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address_in[1]",
+					"name" : "major_opcode_in[4]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address_in[2]",
+					"name" : "major_opcode_in[0]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address_in[3]",
+					"name" : "major_opcode_in[1]",
 					"strict" : false
 				},
 				{
-					"name" : "writeback_address_in[4]",
+					"name" : "major_opcode_in[3]",
 					"strict" : false
 				},
 				{
-					"name" : "alu_result_valid",
+					"name" : "major_opcode_in[6]",
 					"strict" : false
 				},
 				{
-					"name" : "multiplier_result_valid",
+					"name" : "func7_bit0",
 					"strict" : false
 				},
 				{
-					"name" : "multiplier_inst_id[2]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_inst_id[3]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_inst_id[3]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_inst_id[2]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_inst_id[1]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_inst_id[0]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_inst_id[0]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_inst_id[1]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_inst_id[4]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_inst_id[4]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_result_valid",
-					"strict" : false
-				},
-				{
-					"name" : "divider_inst_id[2]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_inst_id[3]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_inst_id[1]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_inst_id[0]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_inst_id[4]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_valid",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_inst_id[3]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_inst_id[4]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_inst_id[2]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_inst_id[1]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_inst_id[0]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction_id[0]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction_id[1]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction_id[2]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction_id[3]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction_id[4]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_data_reduced[1]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_reduced[1]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_data_reduced[1]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_data_reduced[1]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_reduced[2]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_data_reduced[2]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_data_reduced[2]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_data_reduced[2]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_data_reduced[3]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_reduced[3]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_data_reduced[3]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_data_reduced[3]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_reduced[4]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_data_reduced[4]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_data_reduced[4]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_data_reduced[4]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_data_reduced[5]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_reduced[5]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_data_reduced[5]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_data_reduced[5]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_reduced[0]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_data_reduced[0]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_data_reduced[0]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_data_reduced[0]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_data_reduced[6]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_reduced[6]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_data_reduced[6]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_data_reduced[6]",
-					"strict" : false
-				},
-				{
-					"name" : "memory_unit_data_reduced[7]",
-					"strict" : false
-				},
-				{
-					"name" : "multiplier_data_reduced[7]",
-					"strict" : false
-				},
-				{
-					"name" : "alu_data_reduced[7]",
-					"strict" : false
-				},
-				{
-					"name" : "divider_data_reduced[7]",
+					"name" : "major_opcode_in[2]",
 					"strict" : false
 				}
 			]

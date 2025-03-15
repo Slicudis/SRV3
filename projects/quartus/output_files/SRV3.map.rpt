@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SRV3
-Mon Mar 10 21:55:49 2025
+Fri Mar 14 21:46:58 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -13,16 +13,10 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |get_fmax
- 13. Parameter Settings for User Entity Instance: reorder_buffer:reorder_buffer_instance
- 14. Port Connectivity Checks: "reorder_buffer:reorder_buffer_instance"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 10 21:55:49 2025          ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 14 21:46:58 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; SRV3                                           ;
-; Top-level Entity Name              ; get_fmax                                       ;
+; Top-level Entity Name              ; inst_decoder                                   ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 980                                            ;
-;     Total combinational functions  ; 544                                            ;
-;     Dedicated logic registers      ; 514                                            ;
-; Total registers                    ; 514                                            ;
-; Total pins                         ; 85                                             ;
+; Total logic elements               ; 26                                             ;
+;     Total combinational functions  ; 26                                             ;
+;     Dedicated logic registers      ; 0                                              ;
+; Total registers                    ; 0                                              ;
+; Total pins                         ; 24                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -72,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; get_fmax           ; SRV3               ;
+; Top-level entity name                                            ; inst_decoder       ; SRV3               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -161,258 +155,62 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
-; ../../rtl/get_fmax.sv            ; yes             ; User SystemVerilog HDL File  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/get_fmax.sv       ;         ;
-; ../../rtl/reorder_buffer.sv      ; yes             ; User SystemVerilog HDL File  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; ../../rtl/inst_decoder.sv        ; yes             ; User SystemVerilog HDL File  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/inst_decoder.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 980       ;
-;                                             ;           ;
-; Total combinational functions               ; 544       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 488       ;
-;     -- 3 input functions                    ; 37        ;
-;     -- <=2 input functions                  ; 19        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 544       ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 514       ;
-;     -- Dedicated logic registers            ; 514       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 85        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 514       ;
-; Total fan-out                               ; 3730      ;
-; Average fan-out                             ; 3.04      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 26                       ;
+;                                             ;                          ;
+; Total combinational functions               ; 26                       ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 21                       ;
+;     -- 3 input functions                    ; 3                        ;
+;     -- <=2 input functions                  ; 2                        ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 26                       ;
+;     -- arithmetic mode                      ; 0                        ;
+;                                             ;                          ;
+; Total registers                             ; 0                        ;
+;     -- Dedicated logic registers            ; 0                        ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 24                       ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; major_opcode_in[2]~input ;
+; Maximum fan-out                             ; 15                       ;
+; Total fan-out                               ; 136                      ;
+; Average fan-out                             ; 1.84                     ;
++---------------------------------------------+--------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                       ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name    ; Library Name ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+----------------+--------------+
-; |get_fmax                                   ; 544 (3)             ; 514 (0)                   ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |get_fmax                                        ; get_fmax       ; work         ;
-;    |reorder_buffer:reorder_buffer_instance| ; 541 (541)           ; 514 (514)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |get_fmax|reorder_buffer:reorder_buffer_instance ; reorder_buffer ; work         ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; |inst_decoder              ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |inst_decoder       ; inst_decoder ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                               ;
-+--------------------------------------------------------------------------+-----------------------------------------------------------------------+
-; Register name                                                            ; Reason for Removal                                                    ;
-+--------------------------------------------------------------------------+-----------------------------------------------------------------------+
-; reorder_buffer:reorder_buffer_instance|mem_fifo[0].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[1].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[0].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[1].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|mul_fifo[0].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|mul_fifo[1].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|mul_fifo[2].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|mul_fifo[3].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|alu_fifo[0].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|alu_fifo[1].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|alu_fifo[2].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|alu_fifo[3].writeback_data[8..31] ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[15].data[8,9,11..31]        ; Merged with reorder_buffer:reorder_buffer_instance|entry[15].data[10] ;
-; reorder_buffer:reorder_buffer_instance|entry[14].data[8,9,11..31]        ; Merged with reorder_buffer:reorder_buffer_instance|entry[14].data[10] ;
-; reorder_buffer:reorder_buffer_instance|entry[12].data[8,9,11..31]        ; Merged with reorder_buffer:reorder_buffer_instance|entry[12].data[10] ;
-; reorder_buffer:reorder_buffer_instance|entry[8].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[8].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[0].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[0].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[13].data[8,9,11..31]        ; Merged with reorder_buffer:reorder_buffer_instance|entry[13].data[10] ;
-; reorder_buffer:reorder_buffer_instance|entry[11].data[8,9,11..31]        ; Merged with reorder_buffer:reorder_buffer_instance|entry[11].data[10] ;
-; reorder_buffer:reorder_buffer_instance|entry[10].data[8,9,11..31]        ; Merged with reorder_buffer:reorder_buffer_instance|entry[10].data[10] ;
-; reorder_buffer:reorder_buffer_instance|entry[9].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[9].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[7].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[7].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[6].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[6].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[5].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[5].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[4].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[4].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[3].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[3].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[2].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[2].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[1].data[8,9,11..31]         ; Merged with reorder_buffer:reorder_buffer_instance|entry[1].data[10]  ;
-; reorder_buffer:reorder_buffer_instance|entry[13].data[10]                ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[14].data[10]                ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[15].data[10]                ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[12].data[10]                ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[11].data[10]                ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[10].data[10]                ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[9].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[8].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[7].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[6].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[5].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[4].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[3].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[2].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[1].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|entry[0].data[10]                 ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|div_tail_ptr[1]                   ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|mem_tail_ptr[1]                   ; Stuck at GND due to stuck port data_in                                ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[4]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[4]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[3]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[3]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[2]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[2]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[1]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[1]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[0]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[0]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[3]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[3]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[2]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[2]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[1]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[1]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[0]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[0]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[4]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[4]            ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[1]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[1]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[1]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[1]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[2]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[2]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[2]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[2]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[3]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[3]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[3]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[3]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[4]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[4]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[4]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[4]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[5]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[5]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[5]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[5]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[0]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[0]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[0]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[0]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[6]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[6]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[6]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[6]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[7]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[7]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[7]     ; Stuck at GND due to stuck port clock_enable                           ;
-; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[7]     ; Stuck at GND due to stuck port clock_enable                           ;
-; Total Number of Removed Registers = 822                                  ;                                                                       ;
-+--------------------------------------------------------------------------+-----------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                               ;
-+-----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
-; Register name                                                         ; Reason for Removal        ; Registers Removed due to This Register                                ;
-+-----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
-; reorder_buffer:reorder_buffer_instance|mem_tail_ptr[1]                ; Stuck at GND              ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[3],        ;
-;                                                                       ; due to stuck port data_in ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[3],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[2],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[2],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[1],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[1],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[0],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[0],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].inst_id[4],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].inst_id[4],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[1], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[1], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[2], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[2], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[3], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[3], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[4], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[4], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[5], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[5], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[0], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[0], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[6], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[6], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[2].writeback_data[7], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|mem_fifo[3].writeback_data[7]  ;
-; reorder_buffer:reorder_buffer_instance|div_tail_ptr[1]                ; Stuck at GND              ; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[4],        ;
-;                                                                       ; due to stuck port data_in ; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[3],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[3],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[2],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[2],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[1],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[1],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].inst_id[0],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].inst_id[0],        ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[1], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[1], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[2], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[2], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[3], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[3], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[4], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[4], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[5], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[5], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[0], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[0], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[6], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[6], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[2].writeback_data[7], ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|div_fifo[3].writeback_data[7]  ;
-; reorder_buffer:reorder_buffer_instance|mem_fifo[0].writeback_data[10] ; Stuck at GND              ; reorder_buffer:reorder_buffer_instance|entry[13].data[10],            ;
-;                                                                       ; due to stuck port data_in ; reorder_buffer:reorder_buffer_instance|entry[14].data[10],            ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[15].data[10],            ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[12].data[10],            ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[11].data[10],            ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[10].data[10],            ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[9].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[8].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[7].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[6].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[5].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[4].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[3].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[2].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[1].data[10],             ;
-;                                                                       ;                           ; reorder_buffer:reorder_buffer_instance|entry[0].data[10]              ;
-+-----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -420,85 +218,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 514   ;
-; Number of registers using Synchronous Clear  ; 18    ;
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 490   ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|tail_ptr[3]     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|head_ptr[0]     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|alu_head_ptr[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|alu_tail_ptr[1] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|mul_head_ptr[1] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|mul_tail_ptr[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|div_head_ptr[1] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|div_tail_ptr[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|mem_head_ptr[1] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |get_fmax|reorder_buffer:reorder_buffer_instance|mem_tail_ptr[0] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |get_fmax|reorder_buffer:reorder_buffer_instance|Mux4            ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |get_fmax|reorder_buffer:reorder_buffer_instance|Mux8            ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |get_fmax|reorder_buffer:reorder_buffer_instance|Mux11           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |get_fmax|reorder_buffer:reorder_buffer_instance|Mux16           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |get_fmax|reorder_buffer:reorder_buffer_instance|Mux181          ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |get_fmax|reorder_buffer:reorder_buffer_instance|Mux190          ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |get_fmax|reorder_buffer:reorder_buffer_instance|Mux177          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |get_fmax ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; ENTRIES        ; 16    ; Signed Integer                                  ;
-; ID_WIDTH       ; 5     ; Signed Integer                                  ;
-; ALU_FIFO_SIZE  ; 4     ; Signed Integer                                  ;
-; MUL_FIFO_SIZE  ; 4     ; Signed Integer                                  ;
-; DIV_FIFO_SIZE  ; 4     ; Signed Integer                                  ;
-; MEM_FIFO_SIZE  ; 4     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: reorder_buffer:reorder_buffer_instance ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; ENTRIES        ; 16    ; Signed Integer                                             ;
-; ID_WIDTH       ; 5     ; Signed Integer                                             ;
-; ALU_FIFO_SIZE  ; 4     ; Signed Integer                                             ;
-; MUL_FIFO_SIZE  ; 4     ; Signed Integer                                             ;
-; DIV_FIFO_SIZE  ; 4     ; Signed Integer                                             ;
-; MEM_FIFO_SIZE  ; 4     ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reorder_buffer:reorder_buffer_instance"                                                                ;
-+-------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                    ; Type   ; Severity ; Details                                                                             ;
-+-------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; alu_data[31..8]         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; stall_alu               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; multiplier_data[31..8]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; stall_multiplier        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; divider_data[31..8]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; stall_divider           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; memory_unit_data[31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; stall_memory_unit       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -506,20 +233,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 85                          ;
-; cycloneiii_ff         ; 514                         ;
-;     ENA               ; 474                         ;
-;     ENA SCLR          ; 16                          ;
-;     SCLR              ; 2                           ;
-;     plain             ; 22                          ;
-; cycloneiii_lcell_comb ; 544                         ;
-;     normal            ; 544                         ;
-;         2 data inputs ; 19                          ;
-;         3 data inputs ; 37                          ;
-;         4 data inputs ; 488                         ;
+; boundary_port         ; 24                          ;
+; cycloneiii_lcell_comb ; 27                          ;
+;     normal            ; 27                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.00                       ;
-; Average LUT depth     ; 5.70                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -528,7 +251,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -538,12 +261,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Mar 10 21:55:38 2025
+    Info: Processing started: Fri Mar 14 21:46:49 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SRV3 -c SRV3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/get_fmax.sv
-    Info (12023): Found entity 1: get_fmax File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/get_fmax.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/inst_decoder.sv
+    Info (12023): Found entity 1: inst_decoder File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/inst_decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/reorder_buffer.sv
     Info (12023): Found entity 1: reorder_buffer File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/fetch_stage.sv
@@ -552,34 +275,21 @@ Warning (12019): Can't analyze file -- file ../../rtl/alu.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/regfile.sv
     Info (12023): Found entity 1: regfile File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/regfile.sv Line: 10
 Warning (12019): Can't analyze file -- file ../../rtl/multiplication_unit.sv is missing
-Info (12127): Elaborating entity "get_fmax" for the top level hierarchy
-Info (12128): Elaborating entity "reorder_buffer" for hierarchy "reorder_buffer:reorder_buffer_instance" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/get_fmax.sv Line: 89
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(76): truncated value with size 32 to match size of target (2) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 76
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(81): truncated value with size 32 to match size of target (2) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 81
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(104): truncated value with size 32 to match size of target (2) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 104
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(109): truncated value with size 32 to match size of target (2) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 109
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(132): truncated value with size 32 to match size of target (2) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 132
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(137): truncated value with size 32 to match size of target (2) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 137
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(160): truncated value with size 32 to match size of target (2) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 160
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(165): truncated value with size 32 to match size of target (2) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 165
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(274): truncated value with size 32 to match size of target (4) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 274
-Warning (10230): Verilog HDL assignment warning at reorder_buffer.sv(277): truncated value with size 32 to match size of target (4) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 277
+Info (12127): Elaborating entity "inst_decoder" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at inst_decoder.sv(25): truncated value with size 32 to match size of target (16) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/inst_decoder.sv Line: 25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ctr_word[13]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/inst_decoder.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "stall_alu" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/get_fmax.sv Line: 24
-    Warning (15610): No output dependent on input pin "stall_multiplier" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/get_fmax.sv Line: 30
-    Warning (15610): No output dependent on input pin "stall_divider" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/get_fmax.sv Line: 36
-    Warning (15610): No output dependent on input pin "stall_memory_unit" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/get_fmax.sv Line: 42
-Info (21057): Implemented 1073 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 77 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 988 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Mon Mar 10 21:55:49 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 26 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Fri Mar 14 21:46:58 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
 
 

@@ -29,9 +29,7 @@ module branching_unit #(
 
     // * To ROB
     output  wire [29:0]         real_target_address,
-    output  wire [31:0]         incremented_pc,
-    output  wire                flush_and_jump,
-    output  wire                regfile_write
+    output  wire                flush_and_jump
 );
 
 ///
@@ -80,7 +78,6 @@ module branching_unit #(
         reg [29:0] pred_target;
         reg [29:0] real_target;
         reg [29:0] inc_pc;
-        reg regfile_write;
     } stage2_t;
 
     stage2_t stage2;
@@ -110,7 +107,6 @@ module branching_unit #(
             stage2.pred_target <= stage1.pred_target;
             stage2.real_target <= stage1.pc + stage1.offset;
             stage2.inc_pc <= stage1.pc + 'h1;
-            stage2.regfile_write <= stage1.uncond_mode;
         end
     end
 
@@ -122,7 +118,6 @@ module branching_unit #(
         reg [ID_SIZE-1:0] inst_id;
         reg misprediction;
         reg taken;
-        reg regfile_write;
         reg [29:0] target_address;
         reg [29:0] inc_pc;
     } stage3_t;
@@ -136,16 +131,12 @@ module branching_unit #(
             stage3.inst_id <= stage2.inst_id;
             stage3.misprediction <= (stage2.pred_taken ^ stage2.real_taken) || (stage2.real_target != stage2.pred_target);
             stage3.taken <= stage2.real_taken;
-            stage3.regfile_write <= stage2.regfile_write;
             stage3.target_address <= stage2.real_target;
-            stage3.inc_pc <= stage2.inc_pc;
         end
     end
 
     assign real_target_address = stage3.taken ? stage3.target_address : stage3.inc_pc;
-    assign incremented_pc = {stage3.inc_pc, 2'b0};
     assign flush_and_jump = stage3.misprediction;
-    assign regfile_write = stage3.regfile_write;
 
 ///
 endmodule : branching_unit

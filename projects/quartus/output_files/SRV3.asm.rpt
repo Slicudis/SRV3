@@ -1,5 +1,5 @@
 Assembler report for SRV3
-Fri Mar 14 21:47:05 2025
+Sat Mar 15 16:58:38 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Mar 14 21:47:05 2025 ;
+; Assembler Status      ; Successful - Sat Mar 15 16:58:38 2025 ;
 ; Revision Name         ; SRV3                                  ;
-; Top-level Entity Name ; inst_decoder                          ;
+; Top-level Entity Name ; regfile                               ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE22F17C6                          ;
 +-----------------------+---------------------------------------+
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                   ;
 +----------------+-------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x001390D1                                                                                ;
-; Checksum       ; 0x001390D1                                                                                ;
+; JTAG usercode  ; 0x001657A8                                                                                ;
+; Checksum       ; 0x001657A8                                                                                ;
 +----------------+-------------------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Mar 14 21:47:04 2025
+    Info: Processing started: Sat Mar 15 16:58:37 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off SRV3 -c SRV3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4758 megabytes
-    Info: Processing ended: Fri Mar 14 21:47:05 2025
+    Info: Processing ended: Sat Mar 15 16:58:38 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

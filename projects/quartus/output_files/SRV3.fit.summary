@@ -1,16 +1,16 @@
-Fitter Status : Successful - Fri Mar 14 21:47:03 2025
+Fitter Status : Failed - Sat Mar 15 19:44:13 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : SRV3
-Top-level Entity Name : inst_decoder
+Top-level Entity Name : btb
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 26 / 22,320 ( < 1 % )
-    Total combinational functions : 26 / 22,320 ( < 1 % )
-    Dedicated logic registers : 0 / 22,320 ( 0 % )
-Total registers : 0
-Total pins : 24 / 154 ( 16 % )
+Total logic elements : 5,157 / 22,320 ( 23 % )
+    Total combinational functions : 2,170 / 22,320 ( 10 % )
+    Dedicated logic registers : 2,994 / 22,320 ( 13 % )
+Total registers : 2994
+Total pins : 292 / 154 ( 190 % )
 Total virtual pins : 0
-Total memory bits : 0 / 608,256 ( 0 % )
+Total memory bits : 3,840 / 608,256 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

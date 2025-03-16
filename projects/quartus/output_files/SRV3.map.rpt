@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SRV3
-Fri Mar 14 21:46:58 2025
+Sat Mar 15 19:44:09 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -13,10 +13,16 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. General Register Statistics
+ 10. Registers Packed Into Inferred Megafunctions
+ 11. Source assignments for altsyncram:btb_memory_rtl_0|altsyncram_gsd1:auto_generated
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |btb
+ 13. Parameter Settings for Inferred Entity Instance: altsyncram:btb_memory_rtl_0
+ 14. altsyncram Parameter Settings by Entity Instance
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -43,18 +49,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 14 21:46:58 2025          ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 15 19:44:09 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; SRV3                                           ;
-; Top-level Entity Name              ; inst_decoder                                   ;
+; Top-level Entity Name              ; btb                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 26                                             ;
-;     Total combinational functions  ; 26                                             ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 24                                             ;
+; Total logic elements               ; 5,156                                          ;
+;     Total combinational functions  ; 2,169                                          ;
+;     Dedicated logic registers      ; 2,994                                          ;
+; Total registers                    ; 2994                                           ;
+; Total pins                         ; 292                                            ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
+; Total memory bits                  ; 3,840                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
 ; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
@@ -66,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; inst_decoder       ; SRV3               ;
+; Top-level entity name                                            ; btb                ; SRV3               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,63 +160,93 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
+;     Processor 8            ;   0.1%      ;
+;     Processors 9-12        ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
-; ../../rtl/inst_decoder.sv        ; yes             ; User SystemVerilog HDL File  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/inst_decoder.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; ../../rtl/decode_stage/branch_predictor/btb.sv ; yes             ; User SystemVerilog HDL File  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv ;         ;
+; altsyncram.tdf                                 ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                ;         ;
+; stratix_ram_block.inc                          ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc         ;         ;
+; lpm_mux.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                   ;         ;
+; lpm_decode.inc                                 ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                ;         ;
+; aglobal231.inc                                 ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/aglobal231.inc                ;         ;
+; a_rdenreg.inc                                  ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                 ;         ;
+; altrom.inc                                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/altrom.inc                    ;         ;
+; altram.inc                                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/altram.inc                    ;         ;
+; altdpram.inc                                   ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/altdpram.inc                  ;         ;
+; db/altsyncram_gsd1.tdf                         ; yes             ; Auto-Generated Megafunction  ; E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/altsyncram_gsd1.tdf  ;         ;
++------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 26                       ;
-;                                             ;                          ;
-; Total combinational functions               ; 26                       ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 21                       ;
-;     -- 3 input functions                    ; 3                        ;
-;     -- <=2 input functions                  ; 2                        ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 26                       ;
-;     -- arithmetic mode                      ; 0                        ;
-;                                             ;                          ;
-; Total registers                             ; 0                        ;
-;     -- Dedicated logic registers            ; 0                        ;
-;     -- I/O registers                        ; 0                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 24                       ;
-;                                             ;                          ;
-; Embedded Multiplier 9-bit elements          ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; major_opcode_in[2]~input ;
-; Maximum fan-out                             ; 15                       ;
-; Total fan-out                               ; 136                      ;
-; Average fan-out                             ; 1.84                     ;
-+---------------------------------------------+--------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 5,156     ;
+;                                             ;           ;
+; Total combinational functions               ; 2169      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 2086      ;
+;     -- 3 input functions                    ; 55        ;
+;     -- <=2 input functions                  ; 28        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 2169      ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 2994      ;
+;     -- Dedicated logic registers            ; 2994      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 292       ;
+; Total memory bits                           ; 3840      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 3024      ;
+; Total fan-out                               ; 18416     ;
+; Average fan-out                             ; 3.19      ;
++---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-; |inst_decoder              ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |inst_decoder       ; inst_decoder ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name     ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-----------------+--------------+
+; |btb                                   ; 2169 (2169)         ; 2994 (2994)               ; 3840        ; 0            ; 0       ; 0         ; 292  ; 0            ; |btb                                                            ; btb             ; work         ;
+;    |altsyncram:btb_memory_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |btb|altsyncram:btb_memory_rtl_0                                ; altsyncram      ; work         ;
+;       |altsyncram_gsd1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |btb|altsyncram:btb_memory_rtl_0|altsyncram_gsd1:auto_generated ; altsyncram_gsd1 ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                          ;
++-----------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; altsyncram:btb_memory_rtl_0|altsyncram_gsd1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 30           ; 128          ; 30           ; 3840 ; None ;
++-----------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
 +------------------------------------------------------+
@@ -218,14 +254,124 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 2994  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 2994  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions       ;
++--------------------------+------------------+------+
+; Register Name            ; Megafunction     ; Type ;
++--------------------------+------------------+------+
+; btb_output_buffer[0..29] ; btb_memory_rtl_0 ; RAM  ;
++--------------------------+------------------+------+
+
+
++-----------------------------------------------------------------------------------+
+; Source assignments for altsyncram:btb_memory_rtl_0|altsyncram_gsd1:auto_generated ;
++---------------------------------+--------------------+------+---------------------+
+; Assignment                      ; Value              ; From ; To                  ;
++---------------------------------+--------------------+------+---------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                   ;
++---------------------------------+--------------------+------+---------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |btb ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; ENTRIES        ; 128   ; Signed Integer                             ;
+; LH_SIZE        ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: altsyncram:btb_memory_rtl_0 ;
++------------------------------------+----------------------+------------------+
+; Parameter Name                     ; Value                ; Type             ;
++------------------------------------+----------------------+------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped          ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY     ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE   ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped          ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped          ;
+; WIDTH_A                            ; 30                   ; Untyped          ;
+; WIDTHAD_A                          ; 7                    ; Untyped          ;
+; NUMWORDS_A                         ; 128                  ; Untyped          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped          ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped          ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped          ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped          ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped          ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped          ;
+; WIDTH_B                            ; 30                   ; Untyped          ;
+; WIDTHAD_B                          ; 7                    ; Untyped          ;
+; NUMWORDS_B                         ; 128                  ; Untyped          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped          ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped          ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped          ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped          ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped          ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped          ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped          ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped          ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped          ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped          ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped          ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped          ;
+; BYTE_SIZE                          ; 8                    ; Untyped          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped          ;
+; INIT_FILE                          ; UNUSED               ; Untyped          ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped          ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped          ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped          ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped          ;
+; ENABLE_ECC                         ; FALSE                ; Untyped          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped          ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped          ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped          ;
+; CBXI_PARAMETER                     ; altsyncram_gsd1      ; Untyped          ;
++------------------------------------+----------------------+------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                        ;
++-------------------------------------------+-----------------------------+
+; Name                                      ; Value                       ;
++-------------------------------------------+-----------------------------+
+; Number of entity instances                ; 1                           ;
+; Entity Instance                           ; altsyncram:btb_memory_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                   ;
+;     -- WIDTH_A                            ; 30                          ;
+;     -- NUMWORDS_A                         ; 128                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                ;
+;     -- WIDTH_B                            ; 30                          ;
+;     -- NUMWORDS_B                         ; 128                         ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                   ;
++-------------------------------------------+-----------------------------+
 
 
 +-----------------------------------------------------+
@@ -233,16 +379,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 24                          ;
-; cycloneiii_lcell_comb ; 27                          ;
-;     normal            ; 27                          ;
+; boundary_port         ; 292                         ;
+; cycloneiii_ff         ; 2994                        ;
+;     ENA               ; 2994                        ;
+; cycloneiii_lcell_comb ; 2170                        ;
+;     normal            ; 2170                        ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 21                          ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 55                          ;
+;         4 data inputs ; 2086                        ;
+; cycloneiii_ram_block  ; 30                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.71                        ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 7.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -251,7 +400,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -261,35 +410,214 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Mar 14 21:46:49 2025
+    Info: Processing started: Sat Mar 15 19:43:54 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SRV3 -c SRV3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/inst_decoder.sv
-    Info (12023): Found entity 1: inst_decoder File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/inst_decoder.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/reorder_buffer.sv
-    Info (12023): Found entity 1: reorder_buffer File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/reorder_buffer.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/fetch_stage.sv
-    Info (12023): Found entity 1: fetch_stage File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/fetch_stage.sv Line: 1
-Warning (12019): Can't analyze file -- file ../../rtl/alu.sv is missing
-Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/regfile.sv
-    Info (12023): Found entity 1: regfile File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/regfile.sv Line: 10
-Warning (12019): Can't analyze file -- file ../../rtl/multiplication_unit.sv is missing
-Info (12127): Elaborating entity "inst_decoder" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at inst_decoder.sv(25): truncated value with size 32 to match size of target (16) File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/inst_decoder.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file /programacion/systemverilog/risc-v/srv3/rtl/decode_stage/branch_predictor/btb.sv
+    Info (12023): Found entity 1: btb File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 1
+Info (12127): Elaborating entity "btb" for the top level hierarchy
+Warning (10858): Verilog HDL warning at btb.sv(37): object local_history used but never assigned File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 37
+Warning (10858): Verilog HDL warning at btb.sv(38): object saturating_ctr used but never assigned File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 38
+Warning (10036): Verilog HDL or VHDL warning at btb.sv(43): object "write_flag" assigned a value but never read File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 43
+Warning (276027): Inferred dual-clock RAM node "btb_memory_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "btb_tag" is uninferred due to asynchronous read logic File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 29
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "btb_memory_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 30
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter WIDTH_B set to 30
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 128
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "altsyncram:btb_memory_rtl_0"
+Info (12133): Instantiated megafunction "altsyncram:btb_memory_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "30"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "WIDTH_B" = "30"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "128"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gsd1.tdf
+    Info (12023): Found entity 1: altsyncram_gsd1 File: E:/Programacion/SystemVerilog/RISC-V/SRV3/projects/quartus/db/altsyncram_gsd1.tdf Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ctr_word[13]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/inst_decoder.sv Line: 5
+    Warning (13410): Pin "local_history_out[4]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[5]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[6]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[7]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[8]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[9]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[10]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[11]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[12]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[13]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[14]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[15]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[16]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[17]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[18]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[19]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[20]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[21]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[22]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[23]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[24]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[25]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[26]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[27]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[28]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[29]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[30]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[31]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[32]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[33]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[34]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[35]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[36]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[37]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[38]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[39]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[40]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[41]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[42]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[43]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[44]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[45]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[46]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[47]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[48]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[49]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[50]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[51]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[52]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[53]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[54]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[55]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[56]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[57]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[58]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[59]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[60]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[61]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[62]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[63]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[64]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[65]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[66]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[67]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[68]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[69]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[70]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[71]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[72]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[73]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[74]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[75]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[76]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[77]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[78]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[79]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[80]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[81]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[82]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[83]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[84]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[85]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[86]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[87]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[88]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[89]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[90]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[91]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[92]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[93]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[94]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[95]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[96]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[97]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[98]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[99]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[100]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[101]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[102]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[103]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[104]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[105]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[106]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[107]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[108]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[109]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[110]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[111]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[112]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[113]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[114]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[115]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[116]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[117]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[118]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[119]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[120]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[121]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[122]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[123]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[124]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[125]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[126]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
+    Warning (13410): Pin "local_history_out[127]" is stuck at GND File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 26 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Fri Mar 14 21:46:58 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+Warning (21074): Design contains 23 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pre_read_address_in[7]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[8]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[9]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[10]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[11]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[12]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[13]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[14]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[15]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[16]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[17]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[18]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[19]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[20]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[21]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[22]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[23]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[24]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[25]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[26]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[27]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[28]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+    Warning (15610): No output dependent on input pin "pre_read_address_in[29]" File: E:/Programacion/SystemVerilog/RISC-V/SRV3/rtl/decode_stage/branch_predictor/btb.sv Line: 9
+Info (21057): Implemented 5478 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 131 input pins
+    Info (21059): Implemented 161 output pins
+    Info (21061): Implemented 5156 logic cells
+    Info (21064): Implemented 30 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 154 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Sat Mar 15 19:44:09 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:24
 
 

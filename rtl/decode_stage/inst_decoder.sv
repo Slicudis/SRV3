@@ -31,11 +31,11 @@ module inst_decoder(
     [6:5]   data2_sel: rs2, I-Imm, U-imm, 0x00000004
     [7]     mem_offset_sel: I-Imm, S-Imm
     [8]     branch_base_sel: pc, rs1
-    [10:9]  branch_offset_sel: J-imm, B-imm, I-imm, 0x00000004
+    [10:9]  branch_offset_sel: J-imm, B-imm, I-imm
     [11]    call_branching_unit
-    [12]    unconditional_mode (Branching unit) / store_mode /force_add
-    [13]    fence_mode (LSU) / icache_rst (Branching unit)
-    [14]    force_dest_0
+    [12]    unconditional_mode (Branching unit) / store_mode / force_add
+    [13]    fence_mode (LSU)
+    [14]    force_dest_0 / icache_flush (if fence_mode == 1)
     [15]    regfile_we
 */
 

@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sat Mar 15 19:44:09 2025
+Analysis & Synthesis Status : Successful - Sun Mar 16 23:20:30 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : SRV3
-Top-level Entity Name : btb
+Top-level Entity Name : decode_stage
 Family : Cyclone IV E
-Total logic elements : 5,156
-    Total combinational functions : 2,169
-    Dedicated logic registers : 2,994
-Total registers : 2994
-Total pins : 292
+Total logic elements : 522
+    Total combinational functions : 392
+    Dedicated logic registers : 216
+Total registers : 216
+Total pins : 346
 Total virtual pins : 0
-Total memory bits : 3,840
+Total memory bits : 3,008
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
